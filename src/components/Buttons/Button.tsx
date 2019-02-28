@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  css as cssFunc,
   DEFAULT_FONT_SIZE,
   DEFAULT_SPACE,
   getSafeCss,
@@ -23,11 +24,12 @@ export const Button: React.FC<IButton> = ({
   noDefaultHoverCSS,
   children,
   css,
+  disabled,
   takeRef,
   ...rest
 }) => {
   const cssToAdd = `
-    ${getBaseButtonCSS(noDefaultHoverCSS)};
+    ${getBaseButtonCSS(noDefaultHoverCSS || disabled)};
     ${baseNonFlatButtonCSS};
     ${getSafeCss(css)};
   `;

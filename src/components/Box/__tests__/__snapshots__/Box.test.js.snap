@@ -573,7 +573,7 @@ exports[`Test <Box />: multiple props should accept mx 1`] = `
 />
 `;
 
-exports[`Test <Box />: multiple props should accept p[] 1`] = `
+exports[`Test <Box />: multiple props should accept px[] 1`] = `
 .c0 {
   box-sizing: border-box;
   padding-left: 32px;
@@ -589,13 +589,23 @@ exports[`Test <Box />: multiple props should accept p[] 1`] = `
 @media screen and (min-width:768px) {
   .c0 {
     padding-left: 64px;
-    padding-right: 64px;
   }
 }
 
 @media screen and (min-width:1024px) {
   .c0 {
     padding-left: 96px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    padding-right: 64px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c0 {
     padding-right: 96px;
   }
 }
@@ -641,15 +651,63 @@ exports[`Test <Box />: multiple props should accept py[] 1`] = `
 @media screen and (min-width:768px) {
   .c0 {
     padding-top: 64px;
-    padding-bottom: 64px;
   }
 }
 
 @media screen and (min-width:1024px) {
   .c0 {
     padding-top: 96px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    padding-bottom: 64px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c0 {
     padding-bottom: 96px;
   }
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box css={}/>:  css prop (css string) should be handled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  background-color: black;
+  padding-left: 1023px;
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box css={}/>:  css prop (object) should be handled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  background-color: black;
+  padding-left: 1023px;
 }
 
 <div

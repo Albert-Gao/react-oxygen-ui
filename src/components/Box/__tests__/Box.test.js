@@ -8,6 +8,7 @@ import {
   defaultTheme,
   ThemeProvider,
   DEFAULT_FONT_SIZE,
+  css as cssFunc,
 } from '../../../styles';
 
 const getMediaQuery = num => `screen and (min-width:${num}px)`;
@@ -350,7 +351,7 @@ describe('Test <Box />: multiple props', () => {
     );
   });
 
-  test('should accept p[]', () => {
+  test('should accept px[]', () => {
     const getSpace = key =>
       defaultTheme.space[DEFAULT_SPACE[key]] + 'px';
     const { firstChild } = render(
@@ -490,5 +491,34 @@ describe('Test <Box css={}/>: ', () => {
     ).container;
     expect(firstChild).toMatchSnapshot();
     expect(firstChild).toHaveStyleRule('background-color', 'black');
+  });
+
+  test('css prop (object) should be handled', () => {
+    const { firstChild } = render(
+      <ThemeProvider>
+        <Box
+          css={{ backgroundColor: 'black', paddingLeft: '1023px' }}
+        />
+      </ThemeProvider>,
+    ).container;
+    expect(firstChild).toMatchSnapshot();
+    expect(firstChild).toHaveStyleRule('background-color', 'black');
+    expect(firstChild).toHaveStyleRule('padding-left', '1023px');
+  });
+
+  test('css prop (css string) should be handled', () => {
+    const { firstChild } = render(
+      <ThemeProvider>
+        <Box
+          css={cssFunc`
+          background-color: black;
+          padding-left: 1023px;
+          `}
+        />
+      </ThemeProvider>,
+    ).container;
+    expect(firstChild).toMatchSnapshot();
+    expect(firstChild).toHaveStyleRule('background-color', 'black');
+    expect(firstChild).toHaveStyleRule('padding-left', '1023px');
   });
 });

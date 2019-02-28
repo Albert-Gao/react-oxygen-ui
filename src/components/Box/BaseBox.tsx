@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-  bgColor,
+  // @ts-ignore
+  backgroundColor,
   border,
   borderBottom,
   borderColor,
@@ -32,8 +33,12 @@ import {
   width,
   zIndex,
 } from 'styled-system';
-import { DEFAULT_FONT_SIZE, FontSizeType, fontSpecs } from '../../styles';
-import { styled } from '../../styles/styled';
+import {
+  DEFAULT_FONT_SIZE,
+  FontSizeType,
+  fontSpecs,
+} from '../../styles';
+import { css as cssFunc, styled } from '../../styles/styled';
 import { getTransitionValue } from '../../styles/utils';
 import { is } from '../../utils/utils';
 import { CSSType, IBaseBox } from './BaseBox.type';
@@ -93,7 +98,7 @@ const alignSelf = style({
 
 function applyCSS() {
   return ({ css }: { css?: CSSType }) =>
-    is.notExist(css) ? '' : css;
+    is.notExist(css) ? '' : cssFunc`${css}`;
 }
 
 export const BaseBox = styled.div`
@@ -131,7 +136,7 @@ export const BaseBox = styled.div`
   ${borderColor}
 
   ${color}
-  ${bgColor}
+  ${backgroundColor}
   ${boxShadow}
   ${opacity}
 
