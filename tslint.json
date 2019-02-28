@@ -1,0 +1,42 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint-config-airbnb",
+    "tslint-microsoft-contrib",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
+  "jsRules": {},
+  "rules": {
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-pascal-case"
+    ],
+    "prefer-template": [true, "allow-single-concat"],
+    "jsx-boolean-value": ["never"],
+    "no-implicit-dependencies": [true, "dev"],
+    "import-name": false,
+    "function-name": false,
+    "jsx-no-lambda": false,
+    "no-relative-imports": false,
+    "typedef": false,
+    "mocha-no-side-effect-code": false,
+    "no-import-side-effect": [
+      true,
+      { "ignore-module": "(\\.html|\\.css|jest-styled-components)$" }
+    ],
+    "no-reserved-keywords": false,
+    "no-suspicious-comment": false,
+    "export-name": false,
+    "max-func-body-length": false,
+    "prefer-type-cast": false,
+    "missing-jsdoc": false,
+    "use-simple-attributes": false,
+    "informative-docs": false,
+    "strict-boolean-expressions": false,
+    "object-shorthand-properties-first": false
+  },
+  "rulesDirectory": []
+}

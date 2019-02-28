@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <FlatButton />:  [FlatButton] undefined css prop should be ignored 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: inherit;
+  color: #2CAACA;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 0;
+  text-align: center;
+  line-height: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.c0:hover {
+  opacity: 0.9;
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
+.c0:active {
+  -webkit-transform: scale(1) translate(1px,1px);
+  -ms-transform: scale(1) translate(1px,1px);
+  transform: scale(1) translate(1px,1px);
+}
+
+<a
+  class="c0"
+  color="primary"
+  font-size="inherit"
+/>
+`;
+
+exports[`Test <FlatButton />:  css prop should be added 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: inherit;
+  color: #2CAACA;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 0;
+  text-align: center;
+  line-height: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: black;
+}
+
+.c0:hover {
+  opacity: 0.9;
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
+.c0:active {
+  -webkit-transform: scale(1) translate(1px,1px);
+  -ms-transform: scale(1) translate(1px,1px);
+  transform: scale(1) translate(1px,1px);
+}
+
+<a
+  class="c0"
+  color="primary"
+  font-size="inherit"
+/>
+`;
