@@ -1,9 +1,9 @@
-import * as React from "react";
-import { getSafeCss } from "../../styles/utils";
-import { getRefProp } from "../../utils/utils";
-import { BaseBox } from "../Box/BaseBox";
-import { IBaseBoxWithTakeRef } from "../Box/BaseBox.type";
-import { baseButtonCSS } from "./shared";
+import * as React from 'react';
+import { getSafeCss } from '../../styles/utils';
+import { getRefProp } from '../../utils/utils';
+import { BaseBox } from '../Box/BaseBox';
+import { IBaseBoxWithTakeRef } from '../Box/BaseBox.type';
+import { baseButtonCSS } from './shared';
 
 export interface IButton extends IBaseBoxWithTakeRef {
   disabled?: boolean;

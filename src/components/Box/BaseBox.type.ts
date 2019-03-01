@@ -1,7 +1,7 @@
-import { ITheme } from "./../../styles/IThemeType";
-import * as CSS from "csstype";
-import React from "react";
-import { CSSObject, ThemedCssFunction } from "styled-components";
+import { ITheme } from './../../styles/IThemeType';
+import * as CSS from 'csstype';
+import React from 'react';
+import { CSSObject, ThemedCssFunction } from 'styled-components';
 
 type NumberOrString = number | string | null;
 export type Responsive =
@@ -49,13 +49,13 @@ interface IWidthAndHeight {
 }
 
 type SimpleJustifyContentCSS =
-  | "start"
-  | "end"
-  | "center"
-  | "between"
-  | "around";
+  | 'start'
+  | 'end'
+  | 'center'
+  | 'between'
+  | 'around';
 
-type SimpleAlignItemsCSS = "start" | "end" | "center" | "baseline" | "stretch";
+type SimpleAlignItemsCSS = 'start' | 'end' | 'center' | 'baseline' | 'stretch';
 
 interface IFlex {
   direction?: SingleOrArray<CSS.FlexDirectionProperty>;
@@ -80,7 +80,7 @@ interface IBorder {
 interface IColor {
   color?: CSS.ColorProperty;
   bg?: CSS.ColorProperty;
-  boxShadow?: ITheme["shadows"];
+  boxShadow?: ITheme['shadows'];
   opacity?: number | number[];
 }
 
@@ -94,9 +94,9 @@ type DisplayPropertyWithoutString =
   | CSS.DisplayInside
   | CSS.DisplayInternal
   | CSS.DisplayLegacy
-  | "contents"
-  | "list-item"
-  | "none";
+  | 'contents'
+  | 'list-item'
+  | 'none';
 
 interface IPosition {
   display?: SingleOrArray<DisplayPropertyWithoutString>;
@@ -163,10 +163,10 @@ export interface IBaseBox
     IEvents,
     IOthers {}
 
-type IBaseBoxNoRef = Pick<IBaseBox, Exclude<keyof IBaseBox, "ref">>;
+type IBaseBoxNoRef = Pick<IBaseBox, Exclude<keyof IBaseBox, 'ref'>>;
 
 interface ITakeRef {
-  takeRef?: IBaseBox["ref"];
+  takeRef?: IBaseBox['ref'];
 }
 
 // This type is for making forwarding ref easier.

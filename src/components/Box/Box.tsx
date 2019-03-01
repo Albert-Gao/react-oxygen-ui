@@ -1,15 +1,15 @@
-import * as React from "react";
-import { getRefProp, is } from "../../utils/utils";
-import { BaseBox } from "./BaseBox";
-import { IBaseBoxWithTakeRef, PlainObject, Responsive } from "./BaseBox.type";
-import { StyledGapBox } from "./StyledGapBox";
+import * as React from 'react';
+import { getRefProp, is } from '../../utils/utils';
+import { BaseBox } from './BaseBox';
+import { IBaseBoxWithTakeRef, PlainObject, Responsive } from './BaseBox.type';
+import { StyledGapBox } from './StyledGapBox';
 
 interface IA11Y {
   a11yTitle?: string;
 }
 
 export interface IBox extends IBaseBoxWithTakeRef, IA11Y {
-  fill?: "horizontal" | "vertical" | true | false;
+  fill?: 'horizontal' | 'vertical' | true | false;
   gap?: Responsive;
 }
 
@@ -25,27 +25,27 @@ export const Box: React.FC<IBox> = ({
   let fillProps: PlainObject = {};
   if (fill === true) {
     fillProps = {
-      height: "100%",
-      width: "100%"
+      height: '100%',
+      width: '100%',
     };
-  } else if (fill === "horizontal") {
-    fillProps.width = "100%";
-  } else if (fill === "vertical") {
-    fillProps.height = "100%";
+  } else if (fill === 'horizontal') {
+    fillProps.width = '100%';
+  } else if (fill === 'vertical') {
+    fillProps.height = '100%';
   }
 
   let ariaTitle: PlainObject = {};
   if (a11yTitle) {
     ariaTitle = {
-      "aria-label": a11yTitle
+      'aria-label': a11yTitle,
     };
   }
 
   let cursor: PlainObject = {};
   if (is.function(rest.onClick)) {
     cursor = {
-      cursor: "pointer",
-      role: "button"
+      cursor: 'pointer',
+      role: 'button',
 
       // After we figure out how to remove that ugly outline onFocus
       // We can enable the following accessible props
@@ -66,8 +66,8 @@ export const Box: React.FC<IBox> = ({
             <StyledGapBox
               key={index}
               gap={gap}
-              direction={direction || "row"}
-            />
+              direction={direction || 'row'}
+            />,
           );
         }
       }

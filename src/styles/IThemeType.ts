@@ -39,21 +39,21 @@ export interface ITheme {
 }
 
 export const defaultTheme: ITheme = {
-  breakpoints: ["40em", "52em", "64em"],
-  fontSizes: ["12px", "14px", "16px", "24px", "30px", "36px", "48px"],
+  breakpoints: ['40em', '52em', '64em'],
+  fontSizes: ['12px', '14px', '16px', '24px', '30px', '36px', '48px'],
   colors: {
-    white: "white"
+    white: 'white',
   },
   fontWeights: [100, 300, 400, 500, 700, 900],
-  borders: [0, "1px solid"],
-  radii: ["4px"],
+  borders: [0, '1px solid'],
+  radii: ['4px'],
   shadows: [
-    "0px 1px 2px rgba(0,0,0,0.20)",
-    "0px 2px 4px rgba(0,0,0,0.20)",
-    "0px 4px 8px rgba(0,0,0,0.20)",
-    "0px 8px 16px rgba(0,0,0,0.20)",
-    "0px 12px 24px rgba(0,0,0,0.20)"
+    '0px 1px 2px rgba(0,0,0,0.20)',
+    '0px 2px 4px rgba(0,0,0,0.20)',
+    '0px 4px 8px rgba(0,0,0,0.20)',
+    '0px 8px 16px rgba(0,0,0,0.20)',
+    '0px 12px 24px rgba(0,0,0,0.20)',
   ],
   opacity: [],
-  space: [0, 4, 8, 16, 24, 32, 48, 64, 96, 128, 256, 512]
+  space: [0, 4, 8, 16, 24, 32, 48, 64, 96, 128, 256, 512],
 };

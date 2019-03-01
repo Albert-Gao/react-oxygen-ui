@@ -1,24 +1,24 @@
-import * as CSS from "csstype";
-import { px } from "styled-system";
-import styled from "styled-components";
-import { getMediaQuery } from "../../styles/utils";
-import { is } from "../../utils/utils";
-import { Responsive, SingleOrArray } from "./BaseBox.type";
-import { ITheme } from "../../styles/IThemeType";
+import * as CSS from 'csstype';
+import { px } from 'styled-system';
+import styled from 'styled-components';
+import { getMediaQuery } from '../../styles/utils';
+import { is } from '../../utils/utils';
+import { Responsive, SingleOrArray } from './BaseBox.type';
+import { ITheme } from '../../styles/IThemeType';
 
-const defaultBreakpoints: string[] = [40, 52, 64].map(n => n + "em");
+const defaultBreakpoints: string[] = [40, 52, 64].map(n => n + 'em');
 
 const getGapStyle = (
   direction: SingleOrArray<CSS.FlexDirectionProperty>,
   gap: Responsive,
-  theme: ITheme
+  theme: ITheme,
 ) => {
   const styles = [];
   const space = px(gap);
 
-  if (direction === "column") {
+  if (direction === 'column') {
     styles.push(`height: ${space};`);
-  } else if (direction === "row") {
+  } else if (direction === 'row') {
     styles.push(`width: ${space};`);
   } else if (Array.isArray(direction) && direction.length > 0) {
     direction.forEach((dir, index) => {
@@ -36,7 +36,7 @@ const getGapStyle = (
         const responsiveCSS = getMediaQuery(breakPoint, toAdd);
 
         styles.push(`
-          ${index === 0 ? toAdd : ""};
+          ${index === 0 ? toAdd : ''};
           ${responsiveCSS};
         `);
       }
