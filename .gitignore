@@ -8,8 +8,16 @@
 # testing
 /coverage
 
-# production
-/build
+# build
+.DS_Store
+*.log
+.rpt2_cache
+.rts2_cache_cjs
+.rts2_cache_es
+.rts2_cache_umd
+build
+dist
+.rts2*
 
 # misc
 .DS_Store

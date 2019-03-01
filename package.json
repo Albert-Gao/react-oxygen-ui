@@ -12,7 +12,7 @@
     "test": "jest"
   },
   "author": "Albert Gao",
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
     "styled-components": ">=4.0.0",
     "react": ">=15.0.0",
