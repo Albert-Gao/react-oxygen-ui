@@ -1,19 +1,27 @@
-import * as CSS from 'csstype';
-import React from 'react';
-import { CSSObject, ThemedCssFunction } from 'styled-components';
-import {
-  BoxShadowType,
-  ColorType,
-  FontWeightType,
-  ThemeType,
-} from '../../styles';
+import { ITheme } from "./../../styles/IThemeType";
+import * as CSS from "csstype";
+import React from "react";
+import { CSSObject, ThemedCssFunction } from "styled-components";
 
 type NumberOrString = number | string | null;
-export type Responsive = NumberOrString | NumberOrString[];
+export type Responsive =
+  | NumberOrString
+  | NumberOrString[]
+  | { [propName: string]: string };
 export type SingleOrArray<T> = T | T[];
 export type PlainObject = { [name: string]: unknown };
 
 interface ISpace {
+  margin?: Responsive;
+  marginTop?: Responsive;
+  marginBottom?: Responsive;
+  marginLeft?: Responsive;
+  marginRight?: Responsive;
+  padding?: Responsive;
+  paddingTop?: Responsive;
+  paddingBottom?: Responsive;
+  paddingLeft?: Responsive;
+  paddingRight?: Responsive;
   m?: Responsive;
   mt?: Responsive;
   mr?: Responsive;
@@ -41,18 +49,13 @@ interface IWidthAndHeight {
 }
 
 type SimpleJustifyContentCSS =
-  | 'start'
-  | 'end'
-  | 'center'
-  | 'between'
-  | 'around';
+  | "start"
+  | "end"
+  | "center"
+  | "between"
+  | "around";
 
-type SimpleAlignItemsCSS =
-  | 'start'
-  | 'end'
-  | 'center'
-  | 'baseline'
-  | 'stretch';
+type SimpleAlignItemsCSS = "start" | "end" | "center" | "baseline" | "stretch";
 
 interface IFlex {
   direction?: SingleOrArray<CSS.FlexDirectionProperty>;
@@ -70,14 +73,14 @@ interface IBorder {
   borderLeft?: Responsive;
   borderRight?: Responsive;
   borderTop?: Responsive;
-  borderColor?: ColorType;
+  borderColor?: CSS.ColorProperty;
   borderRadius?: number | string;
 }
 
 interface IColor {
-  color?: ColorType;
-  bg?: ColorType;
-  boxShadow?: BoxShadowType;
+  color?: CSS.ColorProperty;
+  bg?: CSS.ColorProperty;
+  boxShadow?: ITheme["shadows"];
   opacity?: number | number[];
 }
 
@@ -91,9 +94,9 @@ type DisplayPropertyWithoutString =
   | CSS.DisplayInside
   | CSS.DisplayInternal
   | CSS.DisplayLegacy
-  | 'contents'
-  | 'list-item'
-  | 'none';
+  | "contents"
+  | "list-item"
+  | "none";
 
 interface IPosition {
   display?: SingleOrArray<DisplayPropertyWithoutString>;
@@ -112,7 +115,7 @@ interface IOverflow {
 
 export type CSSType =
   | CSSObject
-  | ReturnType<ThemedCssFunction<ThemeType>>
+  | ReturnType<ThemedCssFunction<ITheme>>
   | string;
 
 interface IStyledComponentsProp {
@@ -130,7 +133,7 @@ interface IOthers {
 interface ITextCSS {
   lineHeight?: SingleOrArray<CSS.LineHeightProperty<unknown>>;
   textAlign?: SingleOrArray<CSS.TextAlignProperty>;
-  fontWeight?: SingleOrArray<FontWeightType>;
+  fontWeight?: SingleOrArray<NumberOrString>;
   fontSize?: Responsive;
 }
 
@@ -160,10 +163,10 @@ export interface IBaseBox
     IEvents,
     IOthers {}
 
-type IBaseBoxNoRef = Pick<IBaseBox, Exclude<keyof IBaseBox, 'ref'>>;
+type IBaseBoxNoRef = Pick<IBaseBox, Exclude<keyof IBaseBox, "ref">>;
 
 interface ITakeRef {
-  takeRef?: IBaseBox['ref'];
+  takeRef?: IBaseBox["ref"];
 }
 
 // This type is for making forwarding ref easier.

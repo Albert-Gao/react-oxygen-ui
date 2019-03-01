@@ -1,17 +1,7 @@
-import React from 'react';
-import { getFontSpecStyle, IText, Text } from '../';
+import * as React from "react";
+import { Text } from "./Text";
+import { IBaseBoxWithTakeRef } from "../Box/BaseBox.type";
 
-// It uses <Text /> under the hook, the main differences are it will
-// add max-width to enforce a best practice in terms of readability.
-// how many words a line.
-export const Paragraph: React.FC<IText> = ({
-  size,
-  noDefaultLineHeight = false,
-  ...rest
-}) => (
-  <Text
-    as="p"
-    {...getFontSpecStyle(noDefaultLineHeight, true, size)}
-    {...rest}
-  />
+export const Paragraph: React.FC<IBaseBoxWithTakeRef> = props => (
+  <Text as="p" {...props} />
 );

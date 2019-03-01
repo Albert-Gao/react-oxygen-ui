@@ -1,0 +1,741 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <Box /> gap [Multiple children] it should add gap between children 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 55px;
+}
+
+@media screen and (min-width:40em) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c1 {
+    width: 55px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c1 {
+    height: 55px;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .c1 {
+    width: 55px;
+  }
+}
+
+<div
+  class="c0"
+  direction="row,column,row"
+  display="flex"
+>
+  <p>
+    a
+  </p>
+  <div
+    class="c1"
+    direction="row,column,row"
+  />
+  <p>
+    b
+  </p>
+  <div
+    class="c1"
+    direction="row,column,row"
+  />
+  <p>
+    c
+  </p>
+</div>
+`;
+
+exports[`Test <Box /> gap [direction=column] it should add gap between children 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  height: 33px;
+}
+
+<div
+  class="c0"
+  direction="column"
+  display="flex"
+>
+  <p>
+    a
+  </p>
+  <div
+    class="c1"
+    direction="column"
+  />
+  <p>
+    b
+  </p>
+</div>
+`;
+
+exports[`Test <Box /> gap [direction=row] it should add gap between children 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 32px;
+}
+
+<div
+  class="c0"
+  direction="row"
+  display="flex"
+>
+  <p>
+    a
+  </p>
+  <div
+    class="c1"
+    direction="row"
+  />
+  <p>
+    b
+  </p>
+</div>
+`;
+
+exports[`Test <Box /> gap [direction=undefined] it should add gap between children 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 12px;
+}
+
+<div
+  class="c0"
+  display="flex"
+>
+  <p>
+    a
+  </p>
+  <div
+    class="c1"
+    direction="row"
+  />
+  <p>
+    b
+  </p>
+</div>
+`;
+
+exports[`Test <Box /> gap [no gap with children] it should not add gap between children 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  direction="row"
+  display="flex"
+>
+  <p>
+    a
+  </p>
+  <p>
+    b
+  </p>
+</div>
+`;
+
+exports[`Test <Box />: align-items should convert end to flex-end 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: align-items should convert start to flex-start 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: align-self should convert end to flex-end 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: align-self should convert start to flex-start 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: fill should support fill="horizontal" 1`] = `
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+  width="100%"
+/>
+`;
+
+exports[`Test <Box />: fill should support fill="vertical" 1`] = `
+.c0 {
+  box-sizing: border-box;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+  height="100%"
+/>
+`;
+
+exports[`Test <Box />: fill should support fill=false 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: fill should support fill=true 1`] = `
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+  height="100%"
+  width="100%"
+/>
+`;
+
+exports[`Test <Box />: flex-direction should accept column 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  direction="column"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: flex-direction should accept row 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  direction="row"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: justify-content should convert around to space-around 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: justify-content should convert between to space-between 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: justify-content should convert end to flex-end 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: justify-content should convert start to flex-start 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: multiple props should accept a11yTitle 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  aria-label="accessibility test"
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: multiple props should accept boxShadow 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.20);
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: multiple props should accept fontSize 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 11px;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+  font-size="11px"
+/>
+`;
+
+exports[`Test <Box />: multiple props should accept mx 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin-left: 111px;
+  margin-right: 111px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: multiple props should accept px[] 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+@media screen and (min-width:40em) {
+  .c0 {
+    padding-left: 16px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c0 {
+    padding-left: 24px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c0 {
+    padding-right: 16px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c0 {
+    padding-right: 24px;
+  }
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: multiple props should accept py 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box />: multiple props should accept py[] 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+@media screen and (min-width:40em) {
+  .c0 {
+    padding-top: 24px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c0 {
+    padding-top: 32px;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c0 {
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c0 {
+    padding-bottom: 32px;
+  }
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box css={}/>:  css prop (css string) should be handled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  background-color: black;
+  padding-left: 1023px;
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box css={}/>:  css prop (object) should be handled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  background-color: black;
+  padding-left: 1023px;
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;
+
+exports[`Test <Box css={}/>:  css prop should be added 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  background-color: black;
+}
+
+<div
+  class="c0"
+  display="flex"
+/>
+`;

@@ -1,27 +1,15 @@
-import React from 'react';
-import {
-  css as cssFunc,
-  DEFAULT_FONT_SIZE,
-  DEFAULT_SPACE,
-  getSafeCss,
-} from '../../styles';
-import { getRefProp } from '../../utils/utils';
-import { BaseBox } from '../Box/BaseBox';
-import { IBaseBoxWithTakeRef } from '../Box/BaseBox.type';
-import {
-  baseNonFlatButtonCSS,
-  getBaseButtonCSS,
-  INoDefaultHoverCSS,
-} from './shared';
+import * as React from "react";
+import { getSafeCss } from "../../styles/utils";
+import { getRefProp } from "../../utils/utils";
+import { BaseBox } from "../Box/BaseBox";
+import { IBaseBoxWithTakeRef } from "../Box/BaseBox.type";
+import { baseButtonCSS } from "./shared";
 
-export interface IButton
-  extends IBaseBoxWithTakeRef,
-    INoDefaultHoverCSS {
+export interface IButton extends IBaseBoxWithTakeRef {
   disabled?: boolean;
 }
 
 export const Button: React.FC<IButton> = ({
-  noDefaultHoverCSS,
   children,
   css,
   disabled,
@@ -29,27 +17,14 @@ export const Button: React.FC<IButton> = ({
   ...rest
 }) => {
   const cssToAdd = `
-    ${getBaseButtonCSS(noDefaultHoverCSS || disabled)};
-    ${baseNonFlatButtonCSS};
+    ${baseButtonCSS};
+    text-transform: uppercase;
+    overflow: hidden;
     ${getSafeCss(css)};
   `;
 
   return (
-    <BaseBox
-      as="button"
-      border={0}
-      borderColor="transparent"
-      borderRadius={0}
-      fontSize={DEFAULT_FONT_SIZE.bodyHeading}
-      px={DEFAULT_SPACE.small}
-      minHeight="44px"
-      maxHeight="44px"
-      bg="primary"
-      color="white"
-      css={cssToAdd}
-      {...getRefProp(takeRef)}
-      {...rest}
-    >
+    <BaseBox as="button" css={cssToAdd} {...getRefProp(takeRef)} {...rest}>
       {children}
     </BaseBox>
   );

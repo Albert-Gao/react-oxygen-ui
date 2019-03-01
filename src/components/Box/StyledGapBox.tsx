@@ -1,37 +1,42 @@
-import * as CSS from 'csstype';
-import { px } from 'styled-system';
-import { ThemeType } from '../../styles';
-import { styled } from '../../styles/styled';
-import { getMediaQuery } from '../../styles/utils';
-import { is } from '../../utils/utils';
-import { Responsive, SingleOrArray } from './BaseBox.type';
+import * as CSS from "csstype";
+import { px } from "styled-system";
+import styled from "styled-components";
+import { getMediaQuery } from "../../styles/utils";
+import { is } from "../../utils/utils";
+import { Responsive, SingleOrArray } from "./BaseBox.type";
+import { ITheme } from "../../styles/IThemeType";
 
-type ThemeSpaceIndex = keyof ThemeType['space'];
+const defaultBreakpoints: string[] = [40, 52, 64].map(n => n + "em");
 
 const getGapStyle = (
   direction: SingleOrArray<CSS.FlexDirectionProperty>,
   gap: Responsive,
-  theme: ThemeType,
+  theme: ITheme
 ) => {
   const styles = [];
+  const space = px(gap);
 
-  const themeValue = theme.space[gap as ThemeSpaceIndex];
-  const isInTheme = typeof themeValue === 'number';
-  const space = isInTheme ? `${themeValue}px` : px(gap);
-
-  if (direction === 'column') {
+  if (direction === "column") {
     styles.push(`height: ${space};`);
-  } else if (direction === 'row') {
+  } else if (direction === "row") {
     styles.push(`width: ${space};`);
   } else if (Array.isArray(direction) && direction.length > 0) {
     direction.forEach((dir, index) => {
+      let breakPoint;
+
       if (!is.notExist(theme.breakpoints[index])) {
+        breakPoint = theme.breakpoints[index];
+      } else if (!is.notExist(defaultBreakpoints[index])) {
+        breakPoint = defaultBreakpoints[index];
+      }
+
+      if (!is.notExist(breakPoint)) {
         const breakPoint = theme.breakpoints[index];
         const toAdd = getGapStyle(dir, gap, theme);
         const responsiveCSS = getMediaQuery(breakPoint, toAdd);
 
         styles.push(`
-          ${index === 0 ? toAdd : ''};
+          ${index === 0 ? toAdd : ""};
           ${responsiveCSS};
         `);
       }

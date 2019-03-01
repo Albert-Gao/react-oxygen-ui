@@ -1,18 +1,14 @@
-import React from 'react';
-import { DEFAULT_SPACE, getSafeCss } from '../../styles';
-import { getRefProp } from '../../utils/utils';
-import { BaseBox } from '../Box/BaseBox';
-import { IBaseBoxWithTakeRef } from '../Box/BaseBox.type';
-import { IButton } from './Button';
-import { getBaseButtonCSS, INoDefaultHoverCSS } from './shared';
+import * as React from "react";
+import { getSafeCss } from "../../styles/utils";
+import { getRefProp } from "../../utils/utils";
+import { BaseBox } from "../Box/BaseBox";
+import { IBaseBoxWithTakeRef } from "../Box/BaseBox.type";
+import { IButton } from "./Button";
+import { baseButtonCSS } from "./shared";
 
-export interface IFlatButton
-  extends IBaseBoxWithTakeRef,
-    INoDefaultHoverCSS,
-    IButton {}
+export interface IFlatButton extends IBaseBoxWithTakeRef, IButton {}
 
 export const FlatButton: React.FC<IFlatButton> = ({
-  noDefaultHoverCSS,
   children,
   css,
   takeRef,
@@ -21,10 +17,8 @@ export const FlatButton: React.FC<IFlatButton> = ({
   <BaseBox
     as="a"
     fontSize="inherit"
-    px={DEFAULT_SPACE.xxSmall}
-    color="primary"
     css={`
-      ${getBaseButtonCSS(noDefaultHoverCSS)};
+      ${baseButtonCSS};
       ${getSafeCss(css)};
     `}
     {...getRefProp(takeRef)}

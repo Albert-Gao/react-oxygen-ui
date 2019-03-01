@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <Button />:  fontSize should be added 1`] = `
+.c0 {
+  box-sizing: border-box;
+  font-size: 23px;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 0;
+  text-align: center;
+  line-height: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+<button
+  class="c0"
+  font-size="23px"
+/>
+`;
