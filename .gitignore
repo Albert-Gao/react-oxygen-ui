@@ -18,6 +18,7 @@
 build
 /dist
 .rts2*
+.docz
 
 # misc
 .DS_Store
