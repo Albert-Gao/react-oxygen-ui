@@ -6,7 +6,7 @@ exports[`Test <Image />:  css prop should be added 1`] = `
   height: auto;
   -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
   transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
-  max-width: "100%";
+  max-width: 100%;
   background-color: black;
 }
 

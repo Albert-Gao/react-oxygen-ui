@@ -14,7 +14,7 @@ export const Image: React.FC<IImage> = ({ height, css, takeRef, ...rest }) => (
     as="img"
     height={is.notExist(height) ? 'auto' : height}
     css={`
-      max-width: '100%';
+      max-width: 100%;
       ${getSafeCss(css)};
     `}
     {...getRefProp(takeRef)}
