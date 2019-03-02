@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styled, { css as cssFunc } from 'styled-components';
 import {
   // @ts-ignore
   backgroundColor,
@@ -36,7 +37,6 @@ import {
 import { getTransitionValue } from '../../styles/utils';
 import { is } from '../../utils/utils';
 import { CSSType, IBaseBox } from './BaseBox.type';
-import styled, { css as cssFunc } from 'styled-components';
 
 const lineHeight = style({ prop: 'lineHeight' });
 const cursor = style({ prop: 'cursor' });
@@ -152,6 +152,3 @@ export const BaseBox = styled.div`
 
   ${applyCSS};
 ` as React.FC<IBaseBox>;
-
-// Setting the type to the following will mess up type of 'color' prop
-// StyledComponent<'div', ThemeType, IBaseBox>;

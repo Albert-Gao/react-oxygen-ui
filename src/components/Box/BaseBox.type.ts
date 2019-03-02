@@ -1,7 +1,7 @@
-import { ITheme } from './../../styles/IThemeType';
 import * as CSS from 'csstype';
 import React from 'react';
 import { CSSObject, ThemedCssFunction } from 'styled-components';
+import { ITheme } from './../../styles/IThemeType';
 
 type NumberOrString = number | string | null;
 export type Responsive =
