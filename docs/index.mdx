@@ -3,18 +3,23 @@ name: Getting Started
 route: /
 ---
 
-# Getting Started
+# What is it
 
-Design systems enable teams to build better products faster by making design reusable—reusability makes scale possible. This is the heart and primary value of design systems. A design system is a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications.
+The main goal for this project is to provide an extendable, style agnostic components library which suits most of the projects. And no need to write any CSS for a very productivity experiences.
 
-Regardless of the technologies and tools behind them, a successful design system follows these guiding principles:
+# The goal
 
-- **It’s consistent**. The way components are built and managed follows a predictable pattern.
-- **It’s self-contained**. Your design system is treated as a standalone dependency.
-- **It’s reusable**. You’ve built components so they can be reused in many contexts.
-- **It’s accessible**. Applications built with your design system are usable by as many people as possible, no matter how they access the web.
-- **It’s robust**. No matter the product or platform to which your design system is applied, it should perform with grace and minimal bugs.
+- Style agnostic, style it your way.
+- Final bundle is less than 2KB after gzip.
+- Flexible API, ready to extend.
+- 9 components: `BaseBox`, `Box`, `Button`, `FlatButton`, `Input`, `Textarea`, `Heading`, `Paragraph`, `Text` and `Image`.
+- Nearly nothing to learn, every `prop` name is css prop.
+- No need to write CSS at all in most situation.
+- Responsive style has never been such easy. Every prop is responsive-ready, no more tedious media query.
+- Every components contains `css` prop, you can pass string, style object or `styled-components`'s `css` string template.
+- Written by TypeScript. We ship types from start. Enjoy the auto completeion.
+- Based on Styled-components v4 and Styled-System v4, but most of the time, you are dealing with idomatic React props.
 
-## Consistency
+## Credit
 
-Your first, most important task when starting out is to define the rules of your system, document them, and ensure that everyone follows them. When you have clearly documented code standards and best practices in place, designers and developers from across your organization can easily use and, more importantly, contribute to your design system.
+Heavly inspired by Rebass and proundly base on Styled-System.
