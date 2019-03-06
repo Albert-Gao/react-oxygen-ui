@@ -1,0 +1,25 @@
+---
+name: BaseBox
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import { BaseBox } from '../../src';
+
+# BaseBox
+
+`BaseBox` is the foundation of every other components. All the other components is just `BaseBox` with extra `props` (like `type` for `<Input>`) and different `html tag` (like `<p> for <Paragraph>`). You probably don't need to use `BaseBox` directly, but if you want, you can bake your own primitive components based on it.
+
+The main goal of this components is to provide the all the necessary `css` propperties, so we can control them effortlessly in JS.
+
+# Basic usage
+
+If you want to make a component based on `span` tag, you just use the `as` prop from `styled-components`.
+
+<Playground>
+  <BaseBox as="span">This is now rendered as a `span` tag</BaseBox>
+</Playground>
+
+## Properties
+
+<PropsTable of={BaseBox} scales kind />
