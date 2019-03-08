@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/Albert-Gao/react-oxygen/master/docs/assets/logo.png" alt="logo.png">
+<img src="https://github.com/Albert-Gao/react-oxygen/raw/master/docs/assets/logo.png" alt="logo.png">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
