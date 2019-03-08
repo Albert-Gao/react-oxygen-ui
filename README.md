@@ -1,3 +1,5 @@
+<img src="/Albert-Gao/react-oxygen/blob/master/docs/assets/logo.png?raw=true" alt="logo.png">
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Why use this rather than the official create-react-app:
