@@ -9,8 +9,8 @@
   "scripts": {
     "build": "microbundle --jsx react --target browser",
     "dev": "microbundle watch",
-    "docz:dev": "docz dev",
-    "docz:build": "docz build",
+    "doc:dev": "docz dev",
+    "doc:build": "docz build",
     "test": "jest",
     "formatAllCode": "./node_modules/.bin/prettier --parser typescript --write './src/**/*.{ts,tsx,js}'"
   },
