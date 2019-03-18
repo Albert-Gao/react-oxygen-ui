@@ -5,6 +5,7 @@ import { BaseBox } from '../Box/BaseBox';
 import { IBaseBoxWithTakeRef } from '../Box/BaseBox.type';
 import { IButton } from './Button';
 import { baseButtonCSS } from './shared';
+import { css as cssFunc } from 'styled-components';
 
 export interface IFlatButton extends IBaseBoxWithTakeRef, IButton {}
 
@@ -17,7 +18,7 @@ export const FlatButton: React.FC<IFlatButton> = ({
   <BaseBox
     as="a"
     fontSize="inherit"
-    css={`
+    css={cssFunc`
       ${baseButtonCSS};
       ${getSafeCss(css)};
     `}

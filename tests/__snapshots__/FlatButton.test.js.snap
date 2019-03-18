@@ -50,3 +50,83 @@ exports[`Test <FlatButton />:  css prop should be added 1`] = `
   font-size="inherit"
 />
 `;
+
+exports[`Test <FlatButton css={}/>:  css prop (css string) should be handled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  font-size: inherit;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 0;
+  text-align: center;
+  line-height: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: black;
+  padding-left: 1023px;
+}
+
+<a
+  class="c0"
+  font-size="inherit"
+/>
+`;
+
+exports[`Test <FlatButton css={}/>:  css prop (object) should be handled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  font-size: inherit;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 0;
+  text-align: center;
+  line-height: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: black;
+  padding-left: 1023px;
+}
+
+<a
+  class="c0"
+  font-size="inherit"
+/>
+`;
+
+exports[`Test <FlatButton css={}/>:  css prop should be added 1`] = `
+.c0 {
+  box-sizing: border-box;
+  font-size: inherit;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: 0;
+  text-align: center;
+  line-height: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: black;
+}
+
+<a
+  class="c0"
+  font-size="inherit"
+/>
+`;

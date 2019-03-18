@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { css as cssFunc } from 'styled-components';
 import { getSafeCss } from '../styles/utils';
 import { getRefProp, is } from '../utils/utils';
 import { BaseBox } from './Box/BaseBox';
@@ -13,7 +14,7 @@ export const Image: React.FC<IImage> = ({ height, css, takeRef, ...rest }) => (
   <BaseBox
     as="img"
     height={is.notExist(height) ? 'auto' : height}
-    css={`
+    css={cssFunc`
       max-width: 100%;
       ${getSafeCss(css)};
     `}

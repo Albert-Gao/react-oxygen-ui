@@ -15,3 +15,53 @@ exports[`Test <Image />:  css prop should be added 1`] = `
   height="auto"
 />
 `;
+
+exports[`Test <Image css={}/>:  css prop (css string) should be handled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  height: auto;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  max-width: 100%;
+  background-color: black;
+  padding-left: 1023px;
+}
+
+<img
+  class="c0"
+  height="auto"
+/>
+`;
+
+exports[`Test <Image css={}/>:  css prop (object) should be handled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  height: auto;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  max-width: 100%;
+  background-color: black;
+  padding-left: 1023px;
+}
+
+<img
+  class="c0"
+  height="auto"
+/>
+`;
+
+exports[`Test <Image css={}/>:  css prop should be added 1`] = `
+.c0 {
+  box-sizing: border-box;
+  height: auto;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  max-width: 100%;
+  background-color: black;
+}
+
+<img
+  class="c0"
+  height="auto"
+/>
+`;

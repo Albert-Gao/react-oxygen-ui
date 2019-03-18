@@ -3,6 +3,7 @@ import { getSafeCss } from '../../styles/utils';
 import { getRefProp } from '../../utils/utils';
 import { BaseBox } from '../Box/BaseBox';
 import { IBaseBoxWithTakeRef, Responsive } from '../Box/BaseBox.type';
+import { css as cssFunc } from 'styled-components';
 
 type InputTypes =
   | 'button'
@@ -44,7 +45,7 @@ export interface IInput extends IBaseBoxWithTakeRef {
 export const Input: React.FC<IInput> = ({ css, takeRef, ...rest }) => (
   <BaseBox
     as="input"
-    css={`
+    css={cssFunc`
       ${getSafeCss(css)};
     `}
     {...getRefProp(takeRef)}

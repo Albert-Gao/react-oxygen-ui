@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Text } from './Text';
 import { IBaseBoxWithTakeRef } from '../Box/BaseBox.type';
+import { Text } from './Text';
 
 export const Heading: React.FC<IBaseBoxWithTakeRef> = ({
   children,

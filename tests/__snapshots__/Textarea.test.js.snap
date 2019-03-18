@@ -12,3 +12,44 @@ exports[`Test <Input />:  css prop should be added 1`] = `
   class="c0"
 />
 `;
+
+exports[`Test <Textarea css={}/>:  css prop (css string) should be handled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  background-color: black;
+  padding-left: 1023px;
+}
+
+<textarea
+  class="c0"
+/>
+`;
+
+exports[`Test <Textarea css={}/>:  css prop (object) should be handled 1`] = `
+.c0 {
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  background-color: black;
+  padding-left: 1023px;
+}
+
+<textarea
+  class="c0"
+/>
+`;
+
+exports[`Test <Textarea css={}/>:  css prop should be added 1`] = `
+.c0 {
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  background-color: black;
+}
+
+<textarea
+  class="c0"
+/>
+`;
