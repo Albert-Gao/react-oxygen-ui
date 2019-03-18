@@ -31,9 +31,9 @@ const getGapStyle = (
       }
 
       if (!is.notExist(breakPoint)) {
-        const breakPoint = theme.breakpoints[index];
+        const newBreakPoint = theme.breakpoints[index];
         const toAdd = getGapStyle(dir, gap, theme);
-        const responsiveCSS = getMediaQuery(breakPoint, toAdd);
+        const responsiveCSS = getMediaQuery(newBreakPoint, toAdd);
 
         styles.push(`
           ${index === 0 ? toAdd : ''};
