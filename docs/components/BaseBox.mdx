@@ -8,7 +8,7 @@ import { BaseBox } from '../../src';
 
 # BaseBox
 
-`BaseBox` is the foundation of every other components. All the other components is just `BaseBox` with extra `props` (like `type` for `<Input>`) and different `html tag` (like `<p> for <Paragraph>`). You probably don't need to use `BaseBox` directly, but if you want, you can bake your own primitive components based on it.
+`BaseBox` is the foundation of every other component. All the other components is just `BaseBox` with extra `props` (like `type` for `<Input>`) or different html tag (like `<p> for <Paragraph>`). If you want to bake your own primitive components which seems can't start from any of the basic components, then you might want to start from `<BaseBox>`.
 
 The main goal of this components is to provide the all the necessary `css` propperties, so we can control them effortlessly in JS.
 
@@ -20,6 +20,8 @@ If you want to make a component based on `span` tag, you just use the `as` prop 
   <BaseBox as="span">This is now rendered as a `span` tag</BaseBox>
 </Playground>
 
-## Properties
+## Props
+
+Any prop you see here, you can use it when you use the other component. Because they are all based on `<BaseBox>`.
 
 <PropsTable of={BaseBox} scales kind />
