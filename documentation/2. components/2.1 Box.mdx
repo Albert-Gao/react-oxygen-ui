@@ -1,0 +1,111 @@
+---
+name: 2.1 Box
+menu: 2. Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Box } from '../../src';
+
+# Box
+
+`<Box>` is a `flexbox` (display: flex) actually. Just use it when you want a `div`. But it has some handy props to make your life easier.
+
+## Properties
+
+All `props` from `<BaseBox>`.
+
+### Common props from FlexBox:
+
+| Props           |       CSS        |                                                                      Values |
+| --------------- | :--------------: | --------------------------------------------------------------------------: |
+| direction       |  flex-direction  |                                                                        same |
+| alignItems      |   align-items    |                   Remove `flex-`:<br/> for instance: `flex-start`-> `start` |
+| justify-content |  justifyContent  | Remove `flex-` and `space-`:<br/> for instance: `space-between`-> `between` |
+| bg              | background-color |                                                                        Same |
+
+Now worries, we use TypeScript, so you can have the code completion. :)
+
+### Space props
+
+We have shorthands and full-name props, all the same as `styled-system`.
+
+#### margin
+
+- m / margin
+- mt / marginTop
+- mb / marginBottom
+- ml / marginLeft
+- mr / marginRight
+
+#### padding
+
+- p / padding
+- pt / paddingTop
+- pb / paddingBottom
+- pl / paddingLeft
+- pr / paddingRight
+
+### gap
+
+> gap: Responsive
+
+It's the gap between each children inside this `Box`.
+
+```javascript
+<Box gap="10px">
+  <Box>1</Box>
+  <Box>2</Box>
+  <Box>3</Box>
+</Box>
+```
+
+The above will result in a 10px `gap` between each children. From now on, you don't need to worry about margin for each children in a list. You just add this one `gap` prop in the parent `Box`.
+
+### fill
+
+> fill: 'horinzontal' | 'vertical'
+
+- horinzontal: `width: 100%`
+- vertical: `height: 100%`
+
+### width
+
+Same as CSS `width`, but if you want to use a percentage. You can do:
+
+```javascript
+// These two are equivalent
+<Box width='50%' />
+<Box width={0.5} />
+```
+
+### css
+
+If we don't have a css exposed to you. You can use the css prop. It can take string, CSS object or `css` function from `styled-components`.
+
+```javascript
+import {css} from 'styled-components';
+<Box css={css`color: ${({colors})=>colors.white};`}/>
+
+<Box css='color=white;'/>
+
+<Box css={{color: 'white'}}/>
+```
+
+### as
+
+If you want to change the underneath html tag.
+
+```javascript
+<Box as="span" />
+```
+
+### takeRef
+
+If you want to pass the `ref`, you can pass it to `takeRef`:
+
+```javascript
+const MyBox: React.FC = () => {
+  const ref = useRef();
+  return <Box takeRef={ref} />;
+};
+```
