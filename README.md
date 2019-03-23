@@ -21,17 +21,12 @@ An style agnostic components library with a flexible and extendable API, which y
 
 ## 10 Components
 
-Layout: `<Box>`
-
-Buttons: `<Button>`, `<FlatButton>`
-
-Inputs: `<Input>`, `<Textarea>`
-
-Text: `<Text>`, `<Heading>`, `<Paragraph>`
-
-Image: `<Image>`
-
-Foundation: `<BaseBox>`
+- Layout: `<Box>`
+- Buttons: `<Button>`, `<FlatButton>`
+- Inputs: `<Input>`, `<Textarea>`
+- Text: `<Text>`, `<Heading>`, `<Paragraph>`
+- Image: `<Image>`
+- Foundation: `<BaseBox>`
 
 ## Credits
 
@@ -45,3 +40,7 @@ Foundation: `<BaseBox>`
     Your Input under one minute
   </Link>
 - <Link to="/docs-1-tutorials-1-2-add-design-system">Add design system</Link>
+
+## Documentation
+
+[Check the 1min tutorial to get started](https://react-oxygen-ui.albertgao.now.sh/)
