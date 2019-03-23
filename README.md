@@ -1,6 +1,8 @@
 <p align="center">
-  <img alt="react oxygen" src="https://github.com/Albert-Gao/react-oxygen/raw/master/docs/assets/logo.png" alt="logo.png">
+  <img alt="react oxygen" src="https://github.com/Albert-Gao/react-oxygen-ui/raw/master/docs/assets/logo.png" alt="logo.png">
 </p>
+
+> npm install react-oxygen-ui
 
 # What is it
 

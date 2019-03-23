@@ -8,7 +8,7 @@ menu: 1. Tutorials
 If you use TypeScript, then you are lucky, we have a predefined `interface` for you to define the theme which follows the `styled-system` rule.
 
 ```typescript
-import { IThemeType } from 'react-oxygen';
+import { IThemeType } from 'react-oxygen-ui';
 
 const myTheme: IThemeType = {
   // Now the TypeScript will give you
@@ -21,7 +21,7 @@ const myTheme: IThemeType = {
 If you use JavaScript, you just create your own component based own `react-oxygen`. But if you use `TypeScript`, you need to type checking your components. In `react-oxygen`, every component exposes an interface with the component name add a letter `I`, for instance `IBox` for `<Box>`, and `IText` for `<Text>`.
 
 ```typescript
-import { Box, IBox } from 'react-oxygen';
+import { Box, IBox } from 'react-oxygen-ui';
 
 interface IMyBox extends IBox {
   // my types
