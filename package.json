@@ -11,7 +11,7 @@
     "dev": "microbundle watch",
     "doc:dev": "docz dev",
     "doc:build": "docz build",
-    "doc:publish": "rm ./release-docs && docz build && cp ./now.json ./release-docs && cd ./release-docs && now",
+    "doc:publish": "rm ./release-docs -rf || true && docz build && cp ./now.json ./release-docs && cd ./release-docs && now",
     "test": "jest",
     "formatAllCode": "./node_modules/.bin/prettier --parser typescript --write './src/**/*.{ts,tsx,js}'"
   },
