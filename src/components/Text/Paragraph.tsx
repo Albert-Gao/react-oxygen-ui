@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { IBaseBoxWithTakeRef } from '../Box/BaseBox.type';
-import { Text } from './Text';
+import { IText, Text } from './Text';
 
-export const Paragraph: React.FC<IBaseBoxWithTakeRef> = props => (
+export interface IParagraph extends IText {}
+
+export const Paragraph: React.FC<IParagraph> = props => (
   <Text as="p" {...props} />
 );

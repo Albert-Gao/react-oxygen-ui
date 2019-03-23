@@ -2,7 +2,11 @@ import * as React from 'react';
 import { getSafeCss } from '../../styles/utils';
 import { getRefProp } from '../../utils/utils';
 import { BaseBox } from '../Box/BaseBox';
-import { IBaseBoxWithTakeRef, Responsive } from '../Box/BaseBox.type';
+import {
+  IBaseBoxWithTakeRef,
+  Responsive,
+  NumberOrString,
+} from '../Box/BaseBox.type';
 import { css as cssFunc } from 'styled-components';
 
 type InputTypes =
@@ -29,17 +33,27 @@ type InputTypes =
   | 'url'
   | 'week';
 
-export interface IInput extends IBaseBoxWithTakeRef {
-  type?: InputTypes;
+export interface ICommonInput {
+  autoFocus?: boolean;
+  readOnly?: boolean;
+  required?: boolean;
   disabled?: boolean;
-  width?: Responsive;
-  height?: Responsive;
-  value?: string | number;
-  placeholder?: string | number;
+
   name?: string;
+  defaultValue?: NumberOrString;
+  value?: NumberOrString;
+  placeholder?: NumberOrString;
+
+  maxLength?: number;
 
   onChange?: React.ReactEventHandler;
   onBlur?: React.ReactEventHandler;
+}
+export interface IInput extends IBaseBoxWithTakeRef, ICommonInput {
+  type?: InputTypes;
+  checked?: boolean;
+  width?: Responsive;
+  height?: Responsive;
 }
 
 export const Input: React.FC<IInput> = ({ css, takeRef, ...rest }) => (
