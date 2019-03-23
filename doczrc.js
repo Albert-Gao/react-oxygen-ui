@@ -4,4 +4,5 @@ module.exports = {
   public: '/assets',
   src: './documentation',
   dest: './docs',
+  base: '/react-oxygen-ui/',
 };
