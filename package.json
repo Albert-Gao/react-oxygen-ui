@@ -6,6 +6,10 @@
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
   "source": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Albert-Gao/react-oxygen-ui.git"
+  },
   "scripts": {
     "build": "microbundle --jsx react --target browser",
     "dev": "microbundle watch",
