@@ -1,6 +1,7 @@
 ---
-name: BaseBox
-menu: Components
+name: 2.0 BaseBox
+menu: 2. Components
+order: 1
 ---
 
 import { Playground, PropsTable } from 'docz';
@@ -8,7 +9,7 @@ import { BaseBox } from '../../src';
 
 # BaseBox
 
-`BaseBox` is the foundation of every other component. All the other components is just `BaseBox` with extra `props` (like `type` for `<Input>`) or different html tag (like `<p> for <Paragraph>`). If you want to bake your own primitive components which seems can't start from any of the basic components, then you might want to start from `<BaseBox>`.
+`BaseBox` is the foundation of every other component. All the other components is just `BaseBox` with extra `props` (like `type` for `<Input>`) or different html tag (like `<p> for <Paragraph>`). If you want to bake your own primitive components, then you might want to start from `<BaseBox>`.
 
 The main goal of this components is to provide the all the necessary `css` propperties, so we can control them effortlessly in JS.
 
@@ -16,12 +17,18 @@ The main goal of this components is to provide the all the necessary `css` propp
 
 If you want to make a component based on `span` tag, you just use the `as` prop from `styled-components`.
 
-<Playground>
-  <BaseBox as="span">This is now rendered as a `span` tag</BaseBox>
-</Playground>
+```javascript
+const Span = ({ children, ...rest }) => (
+  <BaseBox as="span" {...rest}>
+    {children}
+  </BaseBox>
+);
+```
 
 ## Props
 
 Any prop you see here, you can use it when you use the other component. Because they are all based on `<BaseBox>`.
+
+In short, these are just plain CSS props.
 
 <PropsTable of={BaseBox} scales kind />
