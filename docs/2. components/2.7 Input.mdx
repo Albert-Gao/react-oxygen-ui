@@ -1,0 +1,34 @@
+---
+name: 2.7 Input
+menu: 2. Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Input } from '../../src';
+
+# Input
+
+It use `<input>` tag.
+
+<Playground>
+  <Input />
+</Playground>
+
+## Properties
+
+All `props` from `<BaseBox>`. With the following extra.
+
+```typescript
+interface IInput extends IBaseBoxWithTakeRef {
+  type?: InputTypes;
+  disabled?: boolean;
+  width?: Responsive;
+  height?: Responsive;
+  value?: string | number;
+  placeholder?: string | number;
+  name?: string;
+
+  onChange?: React.ReactEventHandler;
+  onBlur?: React.ReactEventHandler;
+}
+```

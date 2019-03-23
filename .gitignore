@@ -19,6 +19,7 @@ build
 /dist
 .rts2*
 .docz
+/release-docs
 
 # misc
 .DS_Store

@@ -1,0 +1,94 @@
+---
+name: 1.2 Add design system
+menu: 1. Tutorials
+order: 97
+---
+
+# Add design system
+
+Basically, it is just a theme file for your `styled-components` to create a `Context` that you can use through your whole application.
+
+## 1. Define your design system
+
+```javascript
+export const myTheme = {
+  colors: {
+    lightGrey: '#dfe4ea',
+  },
+  borders: ['1px solid', '2px dashed'],
+  space: ['8px'],
+  radii: ['4px'],
+  fontSizes: ['12px'],
+};
+```
+
+## 2. Wrap the top level application with this theme
+
+```javascript
+import { ThemeProvider } from 'styled-components';
+import { myTheme } from './theme';
+import { App } from './App';
+
+<ThemeProvider theme={myTheme}>
+  <App />
+</ThemeProvider>;
+```
+
+## 3. Now your GeneralInput could be better
+
+```javascript
+import { Input } from 'react-oxygen';
+
+const GeneralInput = ({ validate, errorText }) => {
+  const [input, onInputChange] = useState('');
+  const isCorrectInput = input && validate(text);
+
+  return (
+    <Box direction="column" gap={0}>
+      <Input
+        type="text"
+        padding={0}
+        border={isCorrectInput ? 0 : 1}
+        borderColor={isCorrectInput ? 'lightGrey' : 'red'}
+        borderRadius={0}
+        value={input}
+        onChange={e => {
+          onInputChange(e.currentTarget.value);
+        }}
+      />
+      <Text fontSize={0} color={isCorrectInput ? 'green' : 'red'}>
+        {isCorrectInput ? 'Great, you get it right' : errorText}
+      </Text>
+    </Box>
+  );
+};
+```
+
+## 4. What happened here?
+
+It's the feature from `styled-system`, basically, 2 cases:
+
+- for some `props` like `padding`, `border`<br/>
+  everytime you set a number like `0` or `1`, it will go to your theme, to look at the according array, for instance, `padding={0}`, it will use the `myTheme.space[0]`, and if this number is not the proper index, it will add `px` and apply it. You can still use `string` for those cases which is not been covered in your design system.
+
+- for some `props` like `color`, `bg` and `borderColor` here:<br/>
+  for instance, `borderColor={isCorrectInput ? 'lightGrey' : 'red'}`, it will go find `myTheme.colors`, if you set `lightGrey`, it uses `myTheme.colors.lightGrey`, if there is no such key like `red`, it will use the value(`red`) directly.
+
+## 5. That's basically all of it.
+
+You can have a design system to start.
+
+Or you can just start building your application without learning this, and add a design system when the design is stable.
+
+## 6. One more thing for TypeScript user
+
+If you use TypeScript, then you are lucky, we have a predefined `interface` for you to define the theme which follows the `styled-system` rule.
+
+```typescript
+import { IThemeType } from 'react-oxygen';
+
+const myTheme: IThemeType = {
+  // Now the TypeScript will give you
+  // the auto completion and type checking
+};
+```
