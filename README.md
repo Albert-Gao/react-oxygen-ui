@@ -4,6 +4,8 @@
 
 > npm install react-oxygen-ui
 
+You need to `npm i styled-components` if you haven't, but you don't need to learn `styled-components` at all, because everything is React props in `react-oxygen-ui`.
+
 ## About
 
 An style agnostic components library with a flexible and extendable API, which you can use to build your own components library. If you use `Rebass` before, this is just an enhanced version of it.
