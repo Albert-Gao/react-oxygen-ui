@@ -2,6 +2,11 @@
   <img alt="react oxygen" width='550px' src="https://github.com/Albert-Gao/react-oxygen-ui/raw/master/docs/assets/logo.png" alt="logo.png">
 </p>
 
+[![npm version](https://badge.fury.io/js/react-oxygen-ui.svg)](https://badge.fury.io/js/react-oxygen-ui)
+[![npm](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/react-oxygen-ui)
+[![Build Status](https://travis-ci.org/Albert-Gao/react-oxygen-ui.svg?branch=master)](https://travis-ci.org/Albert-Gao/react-oxygen-ui)
+
+
 > npm install react-oxygen-ui
 
 You need to `npm i styled-components` if you haven't, but you don't need to learn `styled-components` at all, because everything is React props in `react-oxygen-ui`.

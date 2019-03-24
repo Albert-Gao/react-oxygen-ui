@@ -1,0 +1,13 @@
+sudo: false
+language: node_js
+node_js:
+  - 'lts/*'
+matrix:
+  fast_finish: true
+script: npm run travis
+notifications:
+  email:
+    recipients:
+      - albertgaohy@gmail.com
+    on_success: never # default: change
+    on_failure: always # default: always
