@@ -1,10 +1,10 @@
 import * as CSS from 'csstype';
-import { px } from 'styled-system';
 import styled from 'styled-components';
+import { px } from 'styled-system';
+import { ITheme } from '../../styles/IThemeType';
 import { getMediaQuery } from '../../styles/utils';
 import { is } from '../../utils/utils';
 import { Responsive, SingleOrArray } from './BaseBox.type';
-import { ITheme } from '../../styles/IThemeType';
 
 const defaultBreakpoints: string[] = [40, 52, 64].map(n => n + 'em');
 

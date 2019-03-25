@@ -221,6 +221,41 @@ exports[`Test <Box /> gap [no gap with children] it should not add gap between c
 </div>
 `;
 
+exports[`Test <Box /> gap it should add gap without ThemeProvider 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+  transition: all 0.3s cubic-bezier(0.53,0.01,0.36,1.63);
+}
+
+.c1 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 12px;
+}
+
+<div
+  class="c0"
+  display="flex"
+>
+  <p>
+    a
+  </p>
+  <div
+    class="c1"
+    direction="row"
+  />
+  <p>
+    b
+  </p>
+</div>
+`;
+
 exports[`Test <Box />: align-items should convert end to flex-end 1`] = `
 .c0 {
   box-sizing: border-box;
