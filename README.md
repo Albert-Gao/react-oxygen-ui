@@ -49,4 +49,4 @@ An style agnostic components library with a flexible and extendable API, which y
 
 ## Documentation
 
-[Link](https://react-oxygen-ui.albertgao.now.sh/)
+[Check the 1min tutorial to get started](https://github.com/Albert-Gao/react-oxygen-ui/blob/master/docs/1.%20tutorials/1.1%201minGetStart.mdx)
